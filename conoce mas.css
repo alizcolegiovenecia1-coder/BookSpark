@@ -1,0 +1,161 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  background: #f5f8fa;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.fondo{
+    width: 1200px;
+    height: 280px;
+    background: rgba(0,0,0,0.65);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(0, 0, 0, 0,4);
+    border-radius: 20px;
+    position: absolute;
+    left: 35px;
+    top: 140px;  
+    z-index: -1; 
+}
+
+.inicio{
+  text-align: center;
+    padding: 25px;
+    color: white;
+}
+.introduccion {
+    text-align: center;
+    padding: 25px;
+    color: white;
+}
+
+.introduccion p {
+    max-width: 600px;
+    margin: auto;
+    line-height: 1.5;
+    color: white;
+}
+
+.generos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.tarjeta {
+    background-color: #fffaf3;
+    width: 250px;
+    padding: 18px;
+    border-radius: 10px;
+    border: 1px solid #d8c3aa;
+    box-sizing: border-box;
+}
+
+.tarjeta h3 {
+    color: #765640;
+    margin-top: 0;
+}
+
+.tarjeta p {
+    line-height: 1.5;
+}
+
+.tarjeta:hover {
+    background-color: #eee0ce;
+}
+@media (max-width: 600px) {
+    .tarjeta {
+        width: 100%;
+    }
+}
+
+/* Ajustes responsive conservadores: se conserva el diseño original */
+html, body { max-width: 100%; overflow-x: hidden; }
+.fondo {
+  position: absolute;
+  left: 50%;
+  top: 145px;
+  transform: translateX(-50%);
+  width: min(1200px, calc(100% - 32px));
+  height: 320px;
+  z-index: 0;
+}
+.inicio, .introduccion, main { position: relative; z-index: 1; }
+.inicio { padding: 24px 14px 8px; }
+.introduccion { padding: 18px 14px; }
+.introduccion h2 { overflow-wrap: break-word; }
+.generos {
+  width: min(1200px, 100%);
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 20px;
+  padding: 20px;
+}
+.tarjeta {
+  flex: 1 1 230px;
+  width: auto;
+  min-width: 0;
+  max-width: 300px;
+  overflow-wrap: break-word;
+}
+@media (max-width: 760px) {
+  .fondo { top: 135px; width: calc(100% - 20px); height: 430px; }
+  .inicio, .introduccion { padding: 16px 12px; }
+  .inicio h1 { font-size: clamp(24px, 7vw, 32px); }
+  .inicio h2, .introduccion h2 { font-size: clamp(17px, 4.5vw, 22px); }
+  .generos { padding: 12px; gap: 14px; }
+  .tarjeta { flex: 1 1 100%; max-width: 100%; }
+}
+
+/* Cabecera y fondo compartidos: se mantienen iguales en todas las páginas */
+html, body { max-width: 100%; overflow-x: hidden; }
+img, iframe, video, audio { max-width: 100%; }
+#bg-video {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+  object-fit: cover;
+  object-position: center;
+  z-index: -10;
+}
+.menu { position: relative; z-index: 20; width: 100%; max-width: 100%; }
+.menu > ul { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; max-width: 100%; }
+.menu ul h2 { margin: 0; }
+.menu ul li a { text-align: center; white-space: normal; }
+.menu ul li ul { z-index: 50; }
+.logo { position: absolute; top: 0; left: 10px; z-index: 25; }
+.logo img { position: static !important; display: block; max-width: 100%; height: auto; }
+.nombre { z-index: 26; }
+@media (max-width: 760px) {
+  .menu ul li a { padding: 14px 12px; }
+  .logo { position: relative; top: auto; left: auto; display: flex; justify-content: center; align-items: center; gap: 10px; padding: 10px 12px 4px; }
+  .logo img { width: 62px !important; }
+  .logo .nombre { position: static; max-width: 100%; margin: 0; }
+  .nombre { position: relative; top: auto; left: auto; max-width: 100%; margin: 0 auto 6px; text-align: center; }
+  .nombre h1 { font-size: clamp(22px, 5vw, 30px); margin: 0; }
+}
+@media (max-width: 400px) { .menu ul li a { padding: 11px 8px; font-size: 15px; } }

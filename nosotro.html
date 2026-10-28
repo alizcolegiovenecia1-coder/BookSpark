@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BookSpark-Nosotros</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <video autoplay loop muted id="bg-video">
+        <source src="1000075083.mp4" type="video/mp4">
+    </video>
+
+<div class="content"></div>
+<div class="logo">
+  <img src="logo.jpg" alt="logo"style="width:75px; border-radius: 100%;">
+  </div>
+  <div class="nombre"><H1>BookSpark</H1></div>
+  <nav class="menu">
+    <ul>
+      <h2><li><a href="index.html">Inicio</a></li></h2>
+      <li class="submenu">
+        <h2><a href="nosotro.html">Nosotros</a></h2>
+        <ul>
+          <h2><li><a href="historia.html">Historia</a></li></h2>
+          <h2><li><a href="evidencias.html">Evidencias</a></li></h2>
+        </ul>
+      </li>
+      <h2><li><a href="contacto.html">Contacto</a></li></h2>
+    </ul>
+  </nav>
+
+
+  <head>
+  <meta charset="UTF-8">
+  <br>
+  <h1><title>Quienes Somos</title></h1>
+  <link rel="stylesheet" href="nosotros.css">
+</head>
+<body>
+<br>
+  <h2>Quienes Somos</h2>
+
+
+  <button onclick="mostrarImagen(1)">Mision</button>
+  <br>
+  <button onclick="mostrarImagen(2)">Vision</button>
+  <br>
+  <button onclick="mostrarImagen(3)">Pregunta</button>
+  <br>
+  <button onclick="mostrarImagen(4)">Objetivo General</button>
+  <br>
+  <button onclick="mostrarImagen(5)">Objetivos Especificos</button>
+  <br>
+  <button onclick="mostrarImagen(6)">Cronograma</button>
+
+  
+  <div id="contenedor">
+    <img id="img1" src="MISION11.jpg" alt="Imagen 1" style="display:none; width:700px;">
+    <img id="img2" src="VISION11.jpg" alt="Imagen 2" style="display:none; width:700px;">
+    <img id="img3" src="PREGUNTA.jpg" alt="Imagen 3" style="display:none; width:700px;">
+    <img id="img4" src="OBJETIVOS GENERALES.jpg" alt="Imagen 4" style="display:none; width:700px;">
+    <img id="img5" src="OBJETIVOS PRINCIPALES.jpg" alt="Imagen 5" style="display:none; width:700px;">
+    <img id="img6" src="CRONOGRAMA.jpg" alt="Imagen 6" style="display:none; width:700px;">
+    <img id="img6" src="cronograma pt2.jpg" alt="Imagen 6" style="display:none; width:700px;">
+  </div>
+
+  <script >
+    function mostrarImagen(num) {
+  
+  document.getElementById("img1").style.display = "none";
+  document.getElementById("img2").style.display = "none";
+  document.getElementById("img3").style.display = "none";
+  document.getElementById("img4").style.display = "none";
+  document.getElementById("img5").style.display = "none";
+  document.getElementById("img6").style.display = "none";
+
+  
+  document.getElementById("img" + num).style.display = "block";
+}
+
+  </script>
+<section class="documento-pdf">
+<h2>Documentos del proyecto</h2>
+<p>
+Consulta el documento completo de nuestro proyecto.
+</p>
+<div class="tarjeta-pdf">
+<div class="icono-pdf">📄</div>
+<h3>Documento del proyecto</h3>
+<p>Archivo en formato PDF</p>
+<div class="botones-pdf">
+<a href="Hábitos Lectores Y lectura Critica.pdf"
+target="_blank"
+rel="noopener noreferrer"
+class="btn-pdf">
+Ver documento
+</a>
+<a href="Hábitos Lectores Y lectura Critica.pdf"
+download
+class="btn-pdf descargar">
+Descargar PDF
+</a>
+</div>
+</div>
+<div class="fondo"></div>
+</section>
+</body>
+</html>

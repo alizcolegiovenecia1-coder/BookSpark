@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BookSpark-Nosotros-Evidencia</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <video autoplay loop muted id="bg-video">
+        <source src="1000075083.mp4" type="video/mp4">
+    </video>
+
+<div class="content"></div>
+<div class="logo">
+  <img src="logo.jpg" alt="logo"style="width:85px; border-radius: 100%;">
+  </div>
+  <div class="nombre"><H1>BookSpark</H1></div>
+  <nav class="menu">
+    <ul>
+      <h2><li><a href="index.html">Inicio</a></li></h2>
+      <li class="submenu">
+        <h2><a href="nosotro.html">Nosotros</a></h2>
+        <ul>
+          <h2><li><a href="historia.html">Historia</a></li></h2>
+          <h2><li><a href="evidencias.html">Evidencias</a></li></h2>
+        </ul>
+      </li>
+
+      <h2><li><a href="contacto.html">Contacto</a></li></h2>
+    </ul>
+  </nav>
+
+  <head>
+  <meta charset="UTF-8">
+  <br>
+  <h1><title>Evidencia</title></h1>
+  <link rel="stylesheet" href="evidencias.css">
+</head>
+<body>
+  <h2>Evidencias</h2>
+ <div class="botones">
+        <button onclick="mostrarfotos()"><h1>Fotos</h1></button>
+        <button onclick="mostrargraficas()"><h1>Graficas</h1></button>
+        <button onclick="mostrarImagen()"><h1>Escritos</h1></button>
+        <button onclick="mostrarAudio()"><h1>Entrevista audio</h1></button>
+        <button onclick="mostrarvideo()"><h1>Entrevista video</h1></button>
+    </div>
+
+  <div id="botonesgraficas" style="display: none;">
+    <button onclick="mostrarg()"><h1>Muestra del problema</h1></button>
+    <button onclick="mostrargra()"><h1>Conocer Necesidades</h1></button>
+    <button onclick="mostrargrafica()"><h1>Diseño de solucion</h1></button>
+  </div>
+
+  <div id="fotos">
+    <img id="img1" src="foto1.jpg" alt="foto 1" style="display:none; width:400px;">
+    <img id="img2" src="f.png" alt="foto 2" style="display:none; width:400px;">
+    <img id="img3" src="foto3.jpg" alt="foto 3" style="display:none; width:400px;">
+    <img id="img4" src="foto4.jpg" alt="foto 4" style="display:none; width:400px;">
+  </div>
+
+  <div id="problema">
+    <img id="img5" src="mp.png" alt="grafica 1" style="display:none; width:900px;">
+  </div>
+
+  <div id="necesidades">
+    <img id="img6" src="cn.png" alt="grafica 2" style="display:none; width:900px;">
+  </div>
+  
+  <div id="solucion">
+    <img id="img7" src="s.png" alt="grafica 3" style="display:none; width:900px;">
+  </div>
+
+  <div id="video" style="display:none;">
+    <iframe id="1v-SxKu_6Jre6gzY7tsXdC1wOfVwNsNqw"
+    src="https://drive.google.com/file/d/1v-SxKu_6Jre6gzY7tsXdC1wOfVwNsNqw/view?usp=sharing"
+    width="500">
+    </iframe>
+</div>
+
+<div id="audio" style="display:none;">
+    <audio id="aud1" controls>
+        <source src="Audio de Aliz💜" type="audio/mpeg">
+    </audio>
+</div>
+<div id="escritos">
+  <img id="esc" src="1000097079.png" alt="esc" style="display: none; width: 900px;">
+</div>
+
+
+  <script >
+    function mostrarfotos() {
+      document.getElementById("botonesgraficas").style.display = "none";
+      document.getElementById("img5").style.display = "none";
+      document.getElementById("img6").style.display = "none";
+      document.getElementById("img7").style.display = "none";
+      document.getElementById("video").style.display = "none";
+      document.getElementById("audio").style.display = "none";
+      document.getElementById("esc").style.display = "none";
+  
+  document.getElementById("img1").style.display = "block";
+  document.getElementById("img2").style.display = "block";
+  document.getElementById("img3").style.display = "block";
+  document.getElementById("img4").style.display = "block";
+  }
+  
+
+  function mostrargraficas(){
+  document.getElementById("img1").style.display = "none";
+  document.getElementById("img2").style.display = "none";
+  document.getElementById("img3").style.display = "none";
+  document.getElementById("img4").style.display = "none";
+  document.getElementById("video").style.display = "none";
+  document.getElementById("audio").style.display = "none";
+  document.getElementById("esc").style.display = "none";
+  
+
+    document.getElementById("botonesgraficas").style.display = "block";
+    }
+
+  function mostrarg(){
+      document.getElementById("img6").style.display = "none";
+      document.getElementById("img7").style.display = "none";
+      document.getElementById("video").style.display = "none";
+      document.getElementById("audio").style.display = "none";
+      document.getElementById("esc").style.display = "none";
+
+  document.getElementById("img5").style.display = "block";
+  }
+
+function mostrargra(){
+  document.getElementById("img5").style.display = "none";
+  document.getElementById("img7").style.display = "none";
+  document.getElementById("video").style.display = "none";
+  document.getElementById("audio").style.display = "none";
+  document.getElementById("esc").style.display = "none";
+
+  document.getElementById("img6").style.display = "block";
+  }
+
+function mostrargrafica(){
+  document.getElementById("img5").style.display = "none";
+  document.getElementById("img6").style.display = "none";
+  document.getElementById("video").style.display = "none";
+  document.getElementById("audio").style.display = "none";
+  document.getElementById("esc").style.display = "none";
+  
+  document.getElementById("img7").style.display = "block";
+}
+
+function mostrarvideo(){
+   document.getElementById("img1").style.display = "none";
+    document.getElementById("img2").style.display = "none";
+    document.getElementById("img3").style.display = "none";
+    document.getElementById("img4").style.display = "none";
+    document.getElementById("img5").style.display = "none";
+    document.getElementById("img6").style.display = "none";
+    document.getElementById("img7").style.display = "none";
+    document.getElementById("botonesgraficas").style.display = "none";
+    document.getElementById("audio").style.display = "none";
+    document.getElementById("esc").style.display = "none";
+
+    document.getElementById("video").style.display = "block";
+
+}
+
+function mostrarAudio() {
+
+    document.getElementById("img1").style.display = "none";
+    document.getElementById("img2").style.display = "none";
+    document.getElementById("img3").style.display = "none";
+    document.getElementById("img4").style.display = "none";
+    document.getElementById("img5").style.display = "none";
+    document.getElementById("img6").style.display = "none";
+    document.getElementById("img7").style.display = "none";
+    document.getElementById("botonesgraficas").style.display = "none";
+    document.getElementById("video").style.display = "none";
+    document.getElementById("esc").style.display = "none";
+
+    document.getElementById("audio").style.display = "block";
+}
+function mostrarImagen() {
+
+    document.getElementById("img1").style.display = "none";
+    document.getElementById("img2").style.display = "none";
+    document.getElementById("img3").style.display = "none";
+    document.getElementById("img4").style.display = "none";
+    document.getElementById("img5").style.display = "none";
+    document.getElementById("img6").style.display = "none";
+    document.getElementById("img7").style.display = "none";
+    document.getElementById("botonesgraficas").style.display = "none";
+    document.getElementById("video").style.display = "none";
+    document.getElementById("audio").style.display = "none";
+
+    document.getElementById("esc").style.display = "block";
+}
+  </script>
+
+</body>
+</html>
